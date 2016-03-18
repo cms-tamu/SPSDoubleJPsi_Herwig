@@ -63,7 +63,9 @@ from Configuration.AlCa.GlobalTag import GlobalTag
 process.GlobalTag = GlobalTag(process.GlobalTag, 'auto:startup', '')
 
 from Configuration.Generator.HerwigppDefaults_cfi import *
-from Configuration.Generator.HerwigppUE_EE_3C_cfi import *
+from Configuration.Generator.HerwigppUE_EE_5C_cfi import *
+from Configuration.Generator.HerwigppPDF_CTEQ6_LO_cfi import *
+from Configuration.Generator.HerwigppEnergy_13TeV_cfi import *
 
 process.generator = cms.EDFilter("ThePEGGeneratorFilter",
 	herwigDefaultsBlock,
@@ -73,12 +75,19 @@ process.generator = cms.EDFilter("ThePEGGeneratorFilter",
 
 	configFiles = cms.vstring(),
 	parameterSets = cms.vstring(
-		'herwigppUE_EE_3C_8000GeV',
 		'productionParameters',
-		'basicSetup',
-		'setParticlesStableForDetector',
+		'hwpp_cmsDefaults',
+		'hwpp_ue_EE5C',
+		'hwpp_pdf_CTEQ6L1',
+		'hwpp_cm_13TeV',
 	),
 	productionParameters = cms.vstring(
+		
+		#############
+		### Copy here the content of the Herwig++ input card, each line must be in quotation marks and separated by a comma.
+		
+		###############
+		
     'cd /Herwig/Generators',
     'set LHCGenerator:NumberOfEvents 100',
     'set LHCGenerator:RandomNumberGenerator:Seed 31122001',
@@ -122,6 +131,21 @@ process.generator = cms.EDFilter("ThePEGGeneratorFilter",
 ### Change Jpsi properties here
 ### setup Jpsi 443 Jpsi 3.0 9.34E-5 0.000934 0 0 0 3 0
 ################################################
+
+
+    ############
+    ## Change part above according to the Herwig++ input card
+    
+    
+    ################
+
+
+    ####################
+    # Keep the part below since it switches off the other decay modes.
+
+    ####################
+
+
 
 ################################################
 ### Jpsi decay modes below
