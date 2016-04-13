@@ -2,7 +2,10 @@
 # using: 
 # Revision: 1.381.2.13 
 # Source: /local/reps/CMSSW/CMSSW/Configuration/PyReleaseValidation/python/ConfigBuilder.py,v 
+# THE FOLLOWING COMMAND LINE OPTIONS ARE NOT VALID. Current configuration file updated from Run I analysis config provided by Y. Pakhotin and modified by M. Harrendorf and B. Michlin. --J. Rorie, 2016/04/11
 # with command line options: Configuration/GenProduction/python/EightTeV/MSSM_mH_090_mA_2000_Hto2Ato4mu_8TeV-pythia6_cfi.py --step GEN --datatier GEN --conditions auto:startup --eventcontent RECOSIM --python_filename=MSSM_mH_090_mA_2000_Hto2Ato4mu_8TeV-pythia6_537p4_GEN.py --fileout=MSSM_mH_090_mA_2000_Hto2Ato4mu_8TeV-pythia6_537p4_GEN.root -n 10 --no_exec
+
+
 import FWCore.ParameterSet.Config as cms
 
 process = cms.Process('GEN')
@@ -14,53 +17,57 @@ process.load('FWCore.MessageService.MessageLogger_cfi')
 process.load('Configuration.EventContent.EventContent_cff')
 process.load('SimGeneral.MixingModule.mixNoPU_cfi')
 process.load('Configuration.StandardSequences.GeometryRecoDB_cff')
+process.load('Configuration.Geometry.GeometrySimDB_cff')
 process.load('Configuration.StandardSequences.MagneticField_38T_cff')
 process.load('Configuration.StandardSequences.Generator_cff')
 process.load('IOMC.EventVertexGenerators.VtxSmearedRealistic8TeVCollision_cfi')
 process.load('GeneratorInterface.Core.genFilterSummary_cff')
+process.load('Configuration.StandardSequences.SimIdeal_cff')
 process.load('Configuration.StandardSequences.EndOfProcess_cff')
 process.load('Configuration.StandardSequences.FrontierConditions_GlobalTag_cff')
+process.load('Configuration.Generator.HerwigppPDF_CTEQ6_LO_cfi')
 
 process.maxEvents = cms.untracked.PSet(
-    input = cms.untracked.int32(100)
+    input = cms.untracked.int32(10)
 )
 
 # Input source
 process.source = cms.Source("EmptySource")
 
 process.options = cms.untracked.PSet(
-
 )
 
 # Production Info
 process.configurationMetadata = cms.untracked.PSet(
     version = cms.untracked.string('$Revision: 1.381.2.13 $'),
-    annotation = cms.untracked.string('Configuration/GenProduction/python/EightTeV/MSSM_mH_090_mA_2000_Hto2Ato4mu_8TeV-pythia6_cfi.py nevts:10'),
+    annotation = cms.untracked.string('SPS_JPsi_RunII nevts:10'),
     name = cms.untracked.string('PyReleaseValidation')
 )
 
-# Output definition
 
-process.RECOSIMoutput = cms.OutputModule("PoolOutputModule",
-    splitLevel = cms.untracked.int32(0),
-    eventAutoFlushCompressedSize = cms.untracked.int32(5242880),
-    outputCommands = process.RECOSIMEventContent.outputCommands,
-    fileName = cms.untracked.string('SPS_gg-2Jpsi-4mu_8TeV_herwigPP250_5311p5_GEN_v12.root'),
-    dataset = cms.untracked.PSet(
-        filterName = cms.untracked.string(''),
-        dataTier = cms.untracked.string('GEN')
-    ),
+# Output definition
+process.RAWSIMoutput = cms.OutputModule("PoolOutputModule",
     SelectEvents = cms.untracked.PSet(
         SelectEvents = cms.vstring('generation_step')
-    )
+    ),
+    dataset = cms.untracked.PSet(
+        dataTier = cms.untracked.string('GEN-SIM'),
+        filterName = cms.untracked.string('')
+    ),
+    eventAutoFlushCompressedSize = cms.untracked.int32(5242880),
+    fileName = cms.untracked.string('out_sim.root'),
+    outputCommands = process.RAWSIMEventContent.outputCommands,
+    splitLevel = cms.untracked.int32(0)
 )
 
 # Additional output definition
 
+
 # Other statements
 process.genstepfilter.triggerConditions=cms.vstring("generation_step")
 from Configuration.AlCa.GlobalTag import GlobalTag
-process.GlobalTag = GlobalTag(process.GlobalTag, 'auto:startup', '')
+#process.GlobalTag = GlobalTag(process.GlobalTag, 'auto:startup', '')
+process.GlobalTag = GlobalTag(process.GlobalTag, '76X_mcRun2_asymptotic_RunIIFall15DR76_v1', '')
 
 from Configuration.Generator.HerwigppDefaults_cfi import *
 from Configuration.Generator.HerwigppUE_EE_5C_cfi import *
@@ -70,26 +77,27 @@ from Configuration.Generator.HerwigppEnergy_13TeV_cfi import *
 process.generator = cms.EDFilter("ThePEGGeneratorFilter",
 	herwigDefaultsBlock,
 	herwigppUESettingsBlock,
-	crossSection = cms.untracked.double(2.0e+10),
-	filterEfficiency = cms.untracked.double(1.0),
-
+	herwigppPDFSettingsBlock,
+	herwigppEnergySettingsBlock,
 	configFiles = cms.vstring(),
 	parameterSets = cms.vstring(
-		'productionParameters',
 		'hwpp_cmsDefaults',
-		'hwpp_ue_EE5C',
-		'hwpp_pdf_CTEQ6L1',
 		'hwpp_cm_13TeV',
+		'hwpp_ue_EE5C',
+		'hwpp_pdf_CTEQ6L1_Common',
+		'processParameters',
 	),
-	productionParameters = cms.vstring(
+
+
+	processParameters = cms.vstring(
 		
-		#############
-		### Copy here the content of the Herwig++ input card, each line must be in quotation marks and separated by a comma.
-		
-		###############
+			#############
+			### Copy here the content of the Herwig++ input card, each line must be in quotation marks and separated by a comma.
+
+			###############
 		
     'cd /Herwig/Generators',
-    'set LHCGenerator:NumberOfEvents 100',
+    'set LHCGenerator:NumberOfEvents 100000',
     'set LHCGenerator:RandomNumberGenerator:Seed 31122001',
     'set LHCGenerator:DebugLevel 1',
     'set LHCGenerator:PrintEvent 10',
@@ -318,8 +326,26 @@ process.generator = cms.EDFilter("ThePEGGeneratorFilter",
 ##################################################
      'cd /Herwig/Generators',
      'saverun LHC-SSDJpsi LHCGenerator'
-	)
+    ),
+
+    crossSection = cms.untracked.double(2.0e+10),
+    filterEfficiency = cms.untracked.double(1.0),
 )
+
+# This is filter for 2 J/psi, but in the Herwig++ events J/psi's are doubled
+# J/psi(status=3) -> J/psi(status=2) -> J/psi(status=2) -> mu mu
+# For proper filtering we require 4 J/psi's
+process.twoJpsiFilter = cms.EDFilter("MCMultiParticleFilter",
+	src         = cms.InputTag("generator"),
+	NumRequired = cms.int32(0), #BAM: THIS IS THE ONLY PLACE THAT SEEMS LIKE AN OBVIOUS ERROR.  FOUR J/psi's due to double counting (see details above)
+	AcceptMore  = cms.bool(True),
+	Status      = cms.vint32(0),
+	ParticleID  = cms.vint32(443),
+	EtaMax      = cms.vdouble(10), # no cut on eta
+	PtMin       = cms.vdouble(1.0)
+	#  PtMin       = cms.vdouble(3.)
+)
+
 
 process.fourMuonFilter = cms.EDFilter("MCMultiParticleFilter",
   src         = cms.InputTag("generator"),
@@ -332,29 +358,24 @@ process.fourMuonFilter = cms.EDFilter("MCMultiParticleFilter",
 #  PtMin       = cms.vdouble(3.)
 )
 
-# This is filter for 2 J/psi, but in the Herwig++ events J/psi's are doubled
-# J/psi(status=3) -> J/psi(status=2) -> J/psi(status=2) -> mu mu
-# For proper filtering we require 4 J/psi's
-process.twoJpsiFilter = cms.EDFilter("MCMultiParticleFilter",
-  src         = cms.InputTag("generator"),
-  NumRequired = cms.int32(4), # FOUR J/psi's due to double counting (see details above)
-  AcceptMore  = cms.bool(True),
-  Status      = cms.vint32(2),
-  ParticleID  = cms.vint32(443),
-  EtaMax      = cms.vdouble(10), # no cut on eta
-  PtMin       = cms.vdouble(1.0)
-#  PtMin       = cms.vdouble(3.)
-)
 
 # Path and EndPath definitions
 process.generation_step = cms.Path(process.pgen)
+process.simulation_step = cms.Path(process.psim)
 process.genfiltersummary_step = cms.EndPath(process.genFilterSummary)
 process.endjob_step = cms.EndPath(process.endOfProcess)
-process.RECOSIMoutput_step = cms.EndPath(process.RECOSIMoutput)
+process.RAWSIMoutput_step = cms.EndPath(process.RAWSIMoutput)
+
+
+
+
 
 # Schedule definition
-process.schedule = cms.Schedule(process.generation_step,process.genfiltersummary_step,process.endjob_step,process.RECOSIMoutput_step)
+process.schedule = cms.Schedule(process.generation_step,process.genfiltersummary_step,process.simulation_step,process.endjob_step,process.RAWSIMoutput_step)
+
+
+
 # filter all path with the production filter sequence
 for path in process.paths:
-	getattr(process,path)._seq = process.generator * process.twoJpsiFilter * process.fourMuonFilter * getattr(process,path)._seq 
+	getattr(process,path)._seq = process.generator * getattr(process,path)._seq 
 
