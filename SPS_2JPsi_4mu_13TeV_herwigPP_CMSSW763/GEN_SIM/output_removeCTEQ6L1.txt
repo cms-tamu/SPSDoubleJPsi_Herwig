@@ -1,0 +1,23 @@
+==> using COND/Services/RelationalAuthenticationService for auth, sys 1
+==> using COND/Services/RelationalAuthenticationService for auth, sys 1
+Parameters for the mixing of B_sbar0 and B_s0
+x = 25.9622	 y = 0.0740952
+Integrated mixing probability = 0.499263
+Parameters for the mixing of Bbar0 and B0
+x = 0.777938	 y = 0
+Integrated mixing probability = 0.18851
+Parameters for the mixing of B0 and Bbar0
+x = 0.777938	 y = 0
+Integrated mixing probability = 0.18851
+Parameters for the mixing of B_s0 and B_sbar0
+x = 25.9622	 y = 0.0740952
+Integrated mixing probability = 0.499263
+LHAPDF 6.1.5 loading /cvmfs/cms.cern.ch/slc6_amd64_gcc481/external/lhapdf/6.1.5-ddibom3/share/LHAPDF/cteq6l1/cteq6l1_0000.dat
+cteq6l1 PDF set, member #0, version 4; LHAPDF ID = 10042
+----- Begin Fatal Exception 10-May-2016 11:02:05 CEST-----------------------
+An exception of category 'Configuration' occurred while
+   [0] Constructing the EventProcessor
+   [1] Constructing module: class=ThePEGGeneratorFilter label='generator'
+Exception Message:
+ParameterCollector could not find configuration lines block "hwpp_cm_13TeV", included via plus sign.
+----- End Fatal Exception -------------------------------------------------

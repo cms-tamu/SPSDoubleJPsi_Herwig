@@ -1,0 +1,157 @@
+==> using COND/Services/RelationalAuthenticationService for auth, sys 1
+==> using COND/Services/RelationalAuthenticationService for auth, sys 1
+Parameters for the mixing of B_sbar0 and B_s0
+x = 25.9622	 y = 0.0740952
+Integrated mixing probability = 0.499263
+Parameters for the mixing of Bbar0 and B0
+x = 0.777938	 y = 0
+Integrated mixing probability = 0.18851
+Parameters for the mixing of B0 and Bbar0
+x = 0.777938	 y = 0
+Integrated mixing probability = 0.18851
+Parameters for the mixing of B_s0 and B_sbar0
+x = 25.9622	 y = 0.0740952
+Integrated mixing probability = 0.499263
+LHAPDF 6.1.5 loading /cvmfs/cms.cern.ch/slc6_amd64_gcc481/external/lhapdf/6.1.5-ddibom3/share/LHAPDF/cteq6l1/cteq6l1_0000.dat
+cteq6l1 PDF set, member #0, version 4; LHAPDF ID = 10042
+Parameters for the mixing of B_sbar0 and B_s0
+x = 25.9622	 y = 0.0740952
+Integrated mixing probability = 0.499263
+Parameters for the mixing of Bbar0 and B0
+x = 0.777938	 y = 0
+Integrated mixing probability = 0.18851
+Parameters for the mixing of B0 and Bbar0
+x = 0.777938	 y = 0
+Integrated mixing probability = 0.18851
+Parameters for the mixing of B_s0 and B_sbar0
+x = 25.9622	 y = 0.0740952
+Integrated mixing probability = 0.499263
+LHAPDF 6.1.5 loading /cvmfs/cms.cern.ch/slc6_amd64_gcc481/external/lhapdf/6.1.5-ddibom3/share/LHAPDF/cteq6l1/cteq6l1_0000.dat
+cteq6l1 PDF set, member #0, version 4; LHAPDF ID = 10042
+Warning: Total BR for Jpsi does not add up to 1. sum = 0.05935
+Begin processing the 1st record. Run 1, Event 1, LumiSection 1 at 10-May-2016 11:13:08.789 CEST
+Begin processing the 2nd record. Run 1, Event 2, LumiSection 1 at 10-May-2016 11:13:09.169 CEST
+Begin processing the 3rd record. Run 1, Event 3, LumiSection 1 at 10-May-2016 11:13:09.184 CEST
+Begin processing the 4th record. Run 1, Event 4, LumiSection 1 at 10-May-2016 11:13:09.200 CEST
+Begin processing the 5th record. Run 1, Event 5, LumiSection 1 at 10-May-2016 11:13:09.301 CEST
+Begin processing the 6th record. Run 1, Event 6, LumiSection 1 at 10-May-2016 11:13:09.328 CEST
+Begin processing the 7th record. Run 1, Event 7, LumiSection 1 at 10-May-2016 11:13:09.342 CEST
+Begin processing the 8th record. Run 1, Event 8, LumiSection 1 at 10-May-2016 11:13:09.353 CEST
+Begin processing the 9th record. Run 1, Event 9, LumiSection 1 at 10-May-2016 11:13:09.363 CEST
+Begin processing the 10th record. Run 1, Event 10, LumiSection 1 at 10-May-2016 11:13:09.376 CEST
+Begin processing the 11th record. Run 1, Event 11, LumiSection 1 at 10-May-2016 11:13:09.386 CEST
+Begin processing the 12th record. Run 1, Event 12, LumiSection 1 at 10-May-2016 11:13:09.419 CEST
+Begin processing the 13th record. Run 1, Event 13, LumiSection 1 at 10-May-2016 11:13:09.497 CEST
+Begin processing the 14th record. Run 1, Event 14, LumiSection 1 at 10-May-2016 11:13:09.530 CEST
+Begin processing the 15th record. Run 1, Event 15, LumiSection 1 at 10-May-2016 11:13:09.541 CEST
+Begin processing the 16th record. Run 1, Event 16, LumiSection 1 at 10-May-2016 11:13:09.607 CEST
+Begin processing the 17th record. Run 1, Event 17, LumiSection 1 at 10-May-2016 11:13:09.660 CEST
+Begin processing the 18th record. Run 1, Event 18, LumiSection 1 at 10-May-2016 11:13:09.669 CEST
+Begin processing the 19th record. Run 1, Event 19, LumiSection 1 at 10-May-2016 11:13:09.694 CEST
+Begin processing the 20th record. Run 1, Event 20, LumiSection 1 at 10-May-2016 11:13:09.711 CEST
+Begin processing the 21st record. Run 1, Event 21, LumiSection 1 at 10-May-2016 11:13:09.796 CEST
+Begin processing the 22nd record. Run 1, Event 22, LumiSection 1 at 10-May-2016 11:13:09.859 CEST
+Begin processing the 23rd record. Run 1, Event 23, LumiSection 1 at 10-May-2016 11:13:09.870 CEST
+Begin processing the 24th record. Run 1, Event 24, LumiSection 1 at 10-May-2016 11:13:09.914 CEST
+Begin processing the 25th record. Run 1, Event 25, LumiSection 1 at 10-May-2016 11:13:09.929 CEST
+Begin processing the 26th record. Run 1, Event 26, LumiSection 1 at 10-May-2016 11:13:10.010 CEST
+Begin processing the 27th record. Run 1, Event 27, LumiSection 1 at 10-May-2016 11:13:10.077 CEST
+Begin processing the 28th record. Run 1, Event 28, LumiSection 1 at 10-May-2016 11:13:10.158 CEST
+Begin processing the 29th record. Run 1, Event 29, LumiSection 1 at 10-May-2016 11:13:10.187 CEST
+Begin processing the 30th record. Run 1, Event 30, LumiSection 1 at 10-May-2016 11:13:10.257 CEST
+Begin processing the 31st record. Run 1, Event 31, LumiSection 1 at 10-May-2016 11:13:10.276 CEST
+Begin processing the 32nd record. Run 1, Event 32, LumiSection 1 at 10-May-2016 11:13:10.375 CEST
+Begin processing the 33rd record. Run 1, Event 33, LumiSection 1 at 10-May-2016 11:13:10.398 CEST
+Begin processing the 34th record. Run 1, Event 34, LumiSection 1 at 10-May-2016 11:13:10.434 CEST
+Begin processing the 35th record. Run 1, Event 35, LumiSection 1 at 10-May-2016 11:13:10.449 CEST
+Begin processing the 36th record. Run 1, Event 36, LumiSection 1 at 10-May-2016 11:13:10.479 CEST
+Begin processing the 37th record. Run 1, Event 37, LumiSection 1 at 10-May-2016 11:13:10.491 CEST
+Begin processing the 38th record. Run 1, Event 38, LumiSection 1 at 10-May-2016 11:13:10.570 CEST
+Begin processing the 39th record. Run 1, Event 39, LumiSection 1 at 10-May-2016 11:13:10.670 CEST
+Begin processing the 40th record. Run 1, Event 40, LumiSection 1 at 10-May-2016 11:13:10.698 CEST
+Begin processing the 41st record. Run 1, Event 41, LumiSection 1 at 10-May-2016 11:13:10.709 CEST
+Begin processing the 42nd record. Run 1, Event 42, LumiSection 1 at 10-May-2016 11:13:10.820 CEST
+Begin processing the 43rd record. Run 1, Event 43, LumiSection 1 at 10-May-2016 11:13:10.882 CEST
+Begin processing the 44th record. Run 1, Event 44, LumiSection 1 at 10-May-2016 11:13:10.948 CEST
+Begin processing the 45th record. Run 1, Event 45, LumiSection 1 at 10-May-2016 11:13:10.994 CEST
+Begin processing the 46th record. Run 1, Event 46, LumiSection 1 at 10-May-2016 11:13:11.072 CEST
+Begin processing the 47th record. Run 1, Event 47, LumiSection 1 at 10-May-2016 11:13:11.087 CEST
+Begin processing the 48th record. Run 1, Event 48, LumiSection 1 at 10-May-2016 11:13:11.136 CEST
+Begin processing the 49th record. Run 1, Event 49, LumiSection 1 at 10-May-2016 11:13:11.233 CEST
+Begin processing the 50th record. Run 1, Event 50, LumiSection 1 at 10-May-2016 11:13:11.310 CEST
+Begin processing the 51st record. Run 1, Event 51, LumiSection 1 at 10-May-2016 11:13:11.382 CEST
+Begin processing the 52nd record. Run 1, Event 52, LumiSection 1 at 10-May-2016 11:13:11.482 CEST
+Begin processing the 53rd record. Run 1, Event 53, LumiSection 1 at 10-May-2016 11:13:11.490 CEST
+Begin processing the 54th record. Run 1, Event 54, LumiSection 1 at 10-May-2016 11:13:11.515 CEST
+Begin processing the 55th record. Run 1, Event 55, LumiSection 1 at 10-May-2016 11:13:11.564 CEST
+Begin processing the 56th record. Run 1, Event 56, LumiSection 1 at 10-May-2016 11:13:11.593 CEST
+Begin processing the 57th record. Run 1, Event 57, LumiSection 1 at 10-May-2016 11:13:11.714 CEST
+Begin processing the 58th record. Run 1, Event 58, LumiSection 1 at 10-May-2016 11:13:11.728 CEST
+Begin processing the 59th record. Run 1, Event 59, LumiSection 1 at 10-May-2016 11:13:11.761 CEST
+Begin processing the 60th record. Run 1, Event 60, LumiSection 1 at 10-May-2016 11:13:11.770 CEST
+Begin processing the 61st record. Run 1, Event 61, LumiSection 1 at 10-May-2016 11:13:11.804 CEST
+Begin processing the 62nd record. Run 1, Event 62, LumiSection 1 at 10-May-2016 11:13:11.896 CEST
+Begin processing the 63rd record. Run 1, Event 63, LumiSection 1 at 10-May-2016 11:13:11.913 CEST
+Begin processing the 64th record. Run 1, Event 64, LumiSection 1 at 10-May-2016 11:13:11.976 CEST
+Begin processing the 65th record. Run 1, Event 65, LumiSection 1 at 10-May-2016 11:13:11.994 CEST
+Begin processing the 66th record. Run 1, Event 66, LumiSection 1 at 10-May-2016 11:13:12.017 CEST
+Begin processing the 67th record. Run 1, Event 67, LumiSection 1 at 10-May-2016 11:13:12.076 CEST
+Begin processing the 68th record. Run 1, Event 68, LumiSection 1 at 10-May-2016 11:13:12.144 CEST
+Begin processing the 69th record. Run 1, Event 69, LumiSection 1 at 10-May-2016 11:13:12.178 CEST
+Begin processing the 70th record. Run 1, Event 70, LumiSection 1 at 10-May-2016 11:13:12.201 CEST
+Begin processing the 71st record. Run 1, Event 71, LumiSection 1 at 10-May-2016 11:13:12.337 CEST
+Begin processing the 72nd record. Run 1, Event 72, LumiSection 1 at 10-May-2016 11:13:12.366 CEST
+Begin processing the 73rd record. Run 1, Event 73, LumiSection 1 at 10-May-2016 11:13:12.384 CEST
+Begin processing the 74th record. Run 1, Event 74, LumiSection 1 at 10-May-2016 11:13:12.406 CEST
+Begin processing the 75th record. Run 1, Event 75, LumiSection 1 at 10-May-2016 11:13:12.487 CEST
+Begin processing the 76th record. Run 1, Event 76, LumiSection 1 at 10-May-2016 11:13:12.582 CEST
+Begin processing the 77th record. Run 1, Event 77, LumiSection 1 at 10-May-2016 11:13:12.598 CEST
+Begin processing the 78th record. Run 1, Event 78, LumiSection 1 at 10-May-2016 11:13:12.682 CEST
+Begin processing the 79th record. Run 1, Event 79, LumiSection 1 at 10-May-2016 11:13:12.774 CEST
+Begin processing the 80th record. Run 1, Event 80, LumiSection 1 at 10-May-2016 11:13:12.800 CEST
+Begin processing the 81st record. Run 1, Event 81, LumiSection 1 at 10-May-2016 11:13:12.829 CEST
+Begin processing the 82nd record. Run 1, Event 82, LumiSection 1 at 10-May-2016 11:13:12.878 CEST
+Begin processing the 83rd record. Run 1, Event 83, LumiSection 1 at 10-May-2016 11:13:12.902 CEST
+Begin processing the 84th record. Run 1, Event 84, LumiSection 1 at 10-May-2016 11:13:12.915 CEST
+Begin processing the 85th record. Run 1, Event 85, LumiSection 1 at 10-May-2016 11:13:12.982 CEST
+Begin processing the 86th record. Run 1, Event 86, LumiSection 1 at 10-May-2016 11:13:13.001 CEST
+Begin processing the 87th record. Run 1, Event 87, LumiSection 1 at 10-May-2016 11:13:13.024 CEST
+Begin processing the 88th record. Run 1, Event 88, LumiSection 1 at 10-May-2016 11:13:13.120 CEST
+Begin processing the 89th record. Run 1, Event 89, LumiSection 1 at 10-May-2016 11:13:13.173 CEST
+Begin processing the 90th record. Run 1, Event 90, LumiSection 1 at 10-May-2016 11:13:13.253 CEST
+Begin processing the 91st record. Run 1, Event 91, LumiSection 1 at 10-May-2016 11:13:13.348 CEST
+Begin processing the 92nd record. Run 1, Event 92, LumiSection 1 at 10-May-2016 11:13:13.358 CEST
+Begin processing the 93rd record. Run 1, Event 93, LumiSection 1 at 10-May-2016 11:13:13.374 CEST
+Begin processing the 94th record. Run 1, Event 94, LumiSection 1 at 10-May-2016 11:13:13.447 CEST
+Begin processing the 95th record. Run 1, Event 95, LumiSection 1 at 10-May-2016 11:13:13.559 CEST
+Begin processing the 96th record. Run 1, Event 96, LumiSection 1 at 10-May-2016 11:13:13.609 CEST
+Begin processing the 97th record. Run 1, Event 97, LumiSection 1 at 10-May-2016 11:13:13.622 CEST
+Begin processing the 98th record. Run 1, Event 98, LumiSection 1 at 10-May-2016 11:13:13.678 CEST
+Begin processing the 99th record. Run 1, Event 99, LumiSection 1 at 10-May-2016 11:13:14.024 CEST
+Begin processing the 100th record. Run 1, Event 100, LumiSection 1 at 10-May-2016 11:13:14.062 CEST
+
+------------------------------------
+GenXsecAnalyzer:
+------------------------------------
+Before Filtrer: total cross section = 3.648e+04 +- 1.845e+03 pb
+Filter efficiency (taking into account weights)= (0) / (100) = 0.000e+00 +- 0.000e+00
+Filter efficiency (event-level)= (0) / (100) = 0.000e+00 +- 0.000e+00
+After filter: final cross section = 0.000e+00 +- -nan pb
+
+=============================================
+
+MessageLogger Summary
+
+ type     category        sev    module        subroutine        count    total
+ ---- -------------------- -- ---------------- ----------------  -----    -----
+    1 GenXSecAnalyzer      -w GenXSecAnalyzer:                       5        5
+
+ type    category    Examples: run/evt        run/evt          run/evt
+ ---- -------------------- ---------------- ---------------- ----------------
+    1 GenXSecAnalyzer      PostEndRun       PostEndRun       PostEndRun
+
+Severity    # Occurrences   Total Occurrences
+--------    -------------   -----------------
+Warning                 5                   5
+
+BasicConsistency: maximum 4-momentum violation: 0.248507 MeV

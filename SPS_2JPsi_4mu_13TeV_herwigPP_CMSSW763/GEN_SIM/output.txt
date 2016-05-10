@@ -1,0 +1,21 @@
+==> using COND/Services/RelationalAuthenticationService for auth, sys 1
+==> using COND/Services/RelationalAuthenticationService for auth, sys 1
+Parameters for the mixing of B_sbar0 and B_s0
+x = 25.9622	 y = 0.0740952
+Integrated mixing probability = 0.499263
+Parameters for the mixing of Bbar0 and B0
+x = 0.777938	 y = 0
+Integrated mixing probability = 0.18851
+Parameters for the mixing of B0 and Bbar0
+x = 0.777938	 y = 0
+Integrated mixing probability = 0.18851
+Parameters for the mixing of B_s0 and B_sbar0
+x = 25.9622	 y = 0.0740952
+Integrated mixing probability = 0.499263
+----- Begin Fatal Exception 09-May-2016 22:40:00 CEST-----------------------
+An exception of category 'Configuration' occurred while
+   [0] Constructing the EventProcessor
+   [1] Constructing module: class=ThePEGGeneratorFilter label='generator'
+Exception Message:
+ParameterCollector could not find configuration lines block "hwpp_pdf_CTEQ6L1", included via plus sign.
+----- End Fatal Exception -------------------------------------------------
