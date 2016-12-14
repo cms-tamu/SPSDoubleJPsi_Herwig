@@ -1,0 +1,120 @@
+##################################################
+# Example generator based on LHC parameters
+# usage: Herwig++ read LHC-DJpsi.in
+##################################################
+
+##################################################
+# Technical parameters for this run
+##################################################
+cd /Herwig/Generators
+set LHCGenerator:NumberOfEvents 100
+set LHCGenerator:RandomNumberGenerator:Seed 31122001
+set LHCGenerator:DebugLevel 1
+set LHCGenerator:PrintEvent 10
+set LHCGenerator:MaxErrors 10000
+
+##################################################
+# LHC physics parameters (override defaults here) 
+##################################################
+#set LHCGenerator:EventHandler:LuminosityFunction:Energy 7000.0
+set LHCGenerator:EventHandler:LuminosityFunction:Energy 1960.0
+
+# Intrinsic pT tune extrapolated to LHC energy
+set /Herwig/Shower/Evolver:IntrinsicPtGaussian 0.0*GeV
+
+##################################################
+# set SM QCD running (override defaults here) 
+##################################################
+read SM_O2AlphaS_mstw8nl.in
+
+##################################################
+# override default Jpsi properties (including decay channels)
+##################################################
+read Jpsi_prop.in
+
+##################################################
+# Matrix Elements for hadron-hadron collisions 
+# (by default only gamma/Z switched on)
+##################################################
+cd /Herwig/MatrixElements/
+
+# PLUGIN: gg -> Jpsi Jpsi
+library MEgg2JpsiJpsi.so
+create PLUGIN::MEgg2JpsiJpsi MEgg2JpsiJpsi
+set MEgg2JpsiJpsi:Lambda 0.92
+insert SimpleQCD:MatrixElements[0] MEgg2JpsiJpsi
+
+##################################################
+# Change default parton level kinematic cuts
+# (default in share/Herwig++/defaults/Cuts.in)
+##################################################
+set /Herwig/Cuts/MassCut:MinM 2.0*GeV
+set /Herwig/Cuts/MassCut:MaxM 6.0*GeV
+set /Herwig/Cuts/QCDCuts:MHatMin 1.0*GeV
+set /Herwig/Cuts/QCDCuts:MHatMax 500.0*GeV
+set /Herwig/Cuts/QCDCuts:X1Min 1.0e-8
+set /Herwig/Cuts/QCDCuts:X2Min 1.0e-8
+
+##################################################
+# Set pion to be stable
+##################################################
+set /Herwig/Particles/pi0:Stable Stable
+
+##################################################
+# set part of the simulation off
+##################################################
+cd /Herwig/EventHandlers
+#set LHCHandler:CascadeHandler NULL
+#set LHCHandler:HadronizationHandler NULL
+#set LHCHandler:DecayHandler NULL
+cd /Herwig/Shower
+#set SplittingGenerator:ISR No
+
+##################################################
+# swith off multiple scattering UE model
+# (and use the not recommended UA5 model)
+##################################################
+set /Herwig/Shower/ShowerHandler:MPIHandler NULL
+#cd /Herwig/Hadronization/
+#set ClusterHadHandler:UnderlyingEventHandler UA5
+
+##################################################
+# lhapdf pdf sets
+##################################################
+cd /Herwig/Partons
+create ThePEG::LHAPDF myPDFset ThePEGLHAPDF.so
+#set myPDFset:PDFName MSTW2008lo68cl.LHgrid
+set myPDFset:PDFName MRST2006nnlo.LHgrid
+set myPDFset:RemnantHandler /Herwig/Partons/HadronRemnants
+set /Herwig/Particles/p+:PDF myPDFset
+set /Herwig/Particles/pbar-:PDF myPDFset
+#set /Herwig/Particles/pbar+:PDF myPDFset
+
+
+##################################################
+#  Set up analysis
+##################################################
+cd /Herwig/Analysis
+#library Analysis_DJpsi.so
+#create PLUGIN::DJpsiAnalysis DJpsi
+cd /Herwig/Generators
+#insert LHCGenerator:AnalysisHandlers 0 /Herwig/Analysis/DJpsi
+
+##################################################
+#  Useful analysis handlers for HepMC related output
+##################################################
+# Schematic overview of an event (requires --with-hepmc to be set at configure time
+# and the graphviz program 'dot' to produce a plot)
+# insert LHCGenerator:AnalysisHandlers 0 /Herwig/Analysis/Plot
+# A HepMC dump file (requires --with-hepmc to be set at configure time)
+ insert LHCGenerator:AnalysisHandlers 0 /Herwig/Analysis/HepMCFile
+ set /Herwig/Analysis/HepMCFile:PrintEvent 100
+ set /Herwig/Analysis/HepMCFile:Format GenEvent
+ set /Herwig/Analysis/HepMCFile:Units GeV_mm
+ set /Herwig/Analysis/HepMCFile:Filename events.fifo
+
+
+##################################################
+# Save run for later usage with 'Herwig++ run'
+##################################################
+saverun LHC-SSDJpsi LHCGenerator

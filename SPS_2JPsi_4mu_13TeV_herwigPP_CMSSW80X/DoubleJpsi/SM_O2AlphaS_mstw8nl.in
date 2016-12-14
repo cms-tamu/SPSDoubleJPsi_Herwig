@@ -1,0 +1,10 @@
+cd /Herwig
+
+# the strong coupling
+create Herwig::O2AlphaS AlphaSO2 O2AlphaS.so
+set Model:QCD/RunningAlphaS AlphaSO2
+
+# Mock up of the MSTW8NL (NLO) alphaS running: 
+# aS(MZ)=0.12018
+set AlphaSO2:LambdaQCD 250.0*MeV
+set AlphaSO2:LambdaType 1
